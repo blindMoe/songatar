@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 # :nodoc:
-class ProfileController < ApplicationController
+class ProfilesController < ApplicationController
   attr_reader :profile
 
   before_action :fetch_profile_by_email, only: %i[update]
