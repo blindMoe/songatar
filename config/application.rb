@@ -33,7 +33,7 @@ module KickAMoneySign
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
-    config.middleware.insert_before 0, 'Rack::Cors', debug: !Rails.env.production?, logger: (-> { Rails.logger }) do
+    config.middleware.insert_before 0, Rack::Cors, debug: !Rails.env.production?, logger: (-> { Rails.logger }) do
       allow do
         origins '*'
         resource '*', headers: :any, methods: %i[get post patch delete options]
