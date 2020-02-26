@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
-# Base JSONAPI Resources controller
-class ApplicationController < JSONAPI::ResourceController
+# Base Resources controller
+class ApplicationController < ActionController::Base
+  include JSONAPI::ActsAsResourceController
 end
