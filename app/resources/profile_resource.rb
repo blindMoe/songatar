@@ -5,4 +5,6 @@ class ProfileResource < JSONAPI::Resource
   attribute :email
   attribute :spotify_embed_url
   attribute :spotify_trackid
+
+  filter :email
 end
