@@ -6,9 +6,10 @@ class ConfirmationMailerPreview < ActionMailer::Preview
     @profile = Profile.new(
       email: 'test@songatar.com',
       spotify_trackid: '1231231234',
-      spotify_embed_url: 'https://www.google.com'
+      spotify_embed_url: 'https://www.google.com',
+      token: SecureRandom.urlsafe_base64(32)
     )
 
-    @url = @profile.build_update_url
+    @url = @profile.confirmation_url
   end
 end
