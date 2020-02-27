@@ -8,9 +8,8 @@ class Profile < ApplicationRecord
   before_save :ensure_token_exists
 
   def confirmation_url
-    working_token = retrieve_or_create_token
     front_end_url = ENV['FRONT_END_URL']
-    "#{front_end_url}confirm/#{working_token}"
+    "#{front_end_url}confirm/#{token}"
   end
 
   def ensure_token_exists
