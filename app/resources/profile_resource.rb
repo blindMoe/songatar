@@ -10,4 +10,13 @@ class ProfileResource < ApplicationResource
   readonly :spotify_embed_url
 
   filter :email
+
+  after_update :send_confirmation
+
+  private
+
+  def send_confirmation
+    binding.pry
+    ConfirmationMailer.confirm(@model)
+  end
 end
