@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2020_02_27_182444) do
     t.string "spotify_embed_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "spotify_embed_url_waiting"
     t.index ["email"], name: "index_profiles_on_email"
   end
 
