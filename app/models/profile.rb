@@ -15,7 +15,7 @@ class Profile < ApplicationRecord
   def ensure_token_exists
     return if token.present?
 
-    update_column(:token, SecureRandom.urlsafe_base64(32))
+    self.token = SecureRandom.urlsafe_base64(32)
   end
 
   def finalize_changes
