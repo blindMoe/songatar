@@ -2,6 +2,6 @@
 
 # :nodoc:
 class ApplicationMailer < ActionMailer::Base
-  default from: 'sean@songatar.com'
+  default from: ENV['DEFAULT_FROM_ADDRESS']
   layout 'mailer'
 end
