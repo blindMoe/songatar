@@ -16,7 +16,6 @@ class ProfileResource < ApplicationResource
   private
 
   def send_confirmation
-    binding.pry
     ConfirmationMailer.confirm(@model)
   end
 end
