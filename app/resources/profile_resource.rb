@@ -16,6 +16,6 @@ class ProfileResource < ApplicationResource
   private
 
   def send_confirmation
-    ConfirmationMailer.confirm(@model)
+    ConfirmationMailer.confirm(@model).deliver_now
   end
 end
