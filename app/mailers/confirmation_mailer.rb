@@ -4,7 +4,7 @@
 class ConfirmationMailer < ApplicationMailer
   def confirm(profile)
     @profile = profile
-    @url = profile.build_update_url
+    @url = profile.confirmation_url
 
     mail(to: profile.email, subject: 'Confirm your Songatar changes')
   end
