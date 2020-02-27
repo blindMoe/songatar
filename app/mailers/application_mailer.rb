@@ -1,4 +1,7 @@
+# frozen_string_literal: true
+
+# :nodoc:
 class ApplicationMailer < ActionMailer::Base
-  default from: 'from@example.com'
+  default from: 'sean@songatar.com'
   layout 'mailer'
 end
